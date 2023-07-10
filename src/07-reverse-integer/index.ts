@@ -12,6 +12,16 @@
  * reverseInt(-90) === -9
  */
 
-function reverse(int: number) {}
+function reverse(int: number): number {
+  // Solution 1
+  //   let reversed = 0;
+  //   while (int !== 0) {
+  //     reversed = reversed * 10 + (int % 10);
+  //     int = Math.trunc(int / 10);
+  //   }
+  //   return reversed;
+  // Solution 2
+  return parseInt(int.toString().split("").reverse().join("")) * Math.sign(int);
+}
 
 export { reverse };

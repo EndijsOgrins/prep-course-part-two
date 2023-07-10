@@ -9,6 +9,19 @@
  * vowels('Hello there!') === 4
  */
 
-function vowels(s: string) {}
+function vowels(s: string): number {
+  // Solution 1
+  const vowels = ["a", "e", "i", "o", "u"];
+  let count = 0;
+  for (let char of s.toLowerCase()) {
+    if (vowels.includes(char)) {
+      count++;
+    }
+  }
+  return count;
+  // Solution 2
+  //   const matches = s.match(/[aeiou]/gi);
+  //   return matches ? matches.length : 0;
+}
 
 export { vowels };

@@ -12,9 +12,9 @@
  * longestWord("fun&!! time") === "time"
  */
 
-function longestWord(longestWord: string): string {
+function longestWord(str: string): string {
   // Remove punctuation and split the sentence into an array of words
-  const words = longestWord.replace(/[^\w\s]/g, "").split(" ");
+  const words = str.replace(/[^\w\s]/g, "").split(" ");
 
   // Initialize the longest word as an empty string
   let longest = "";
